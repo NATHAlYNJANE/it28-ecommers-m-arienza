@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Product Inventory</title>
+    <!-- Link to your existing CSS files -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylendex.css">
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+
+    <div class="container">
+        <h1>E-Commerce Product Inventory</h1>
+        
+        <!-- Product 1: Lipstick -->
+        <div class="product">
+            <img src="lipstick_image.jpg" alt="Lipstick">
+            <div class="product-info">
+                <h2>Lipstick</h2>
+                <p>Long-lasting matte lipstick in vibrant shades.</p>
+                <p>Price: $12.99</p>
+                <!-- PayPal Buy Now Button -->
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="YOUR_HOSTED_BUTTON_ID">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                <!-- Button to Proceed to Logistics -->
+                <a href="logistics.html"><button>Proceed to Logistics</button></a>
+            </div>
+        </div>
+        
+        <!-- Add more products as needed -->
+    </div>
+</body>
+</html>

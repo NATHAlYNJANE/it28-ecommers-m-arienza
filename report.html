@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat E-Commerce Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: auto;
+            overflow-y: auto;
+            height: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .chat-container .message {
+            margin-bottom: 10px;
+        }
+        .chat-container .user-message {
+            text-align: right;
+            color: #333;
+        }
+        .chat-container .bot-message {
+            text-align: left;
+            color: #007bff;
+        }
+        .input-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chat E-Commerce Report</h1>
+    </header>
+    <section>
+        <div class="chat-container" id="chat-container">
+            <div class="message bot-message">Welcome! How can I assist you today?</div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <input type="submit" value="Send" onclick="sendMessage()">
+        </div>
+    </section>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            var chatContainer = document.getElementById("chat-container");
+
+            // Display user message
+            var userMessage = document.createElement("div");
+            userMessage.classList.add("message", "user-message");
+            userMessage.textContent = userInput;
+            chatContainer.appendChild(userMessage);
+
+            // Simulate bot response (replace this with actual chatbot logic)
+            setTimeout(function() {
+                var botMessage = document.createElement("div");
+                botMessage.classList.add("message", "bot-message");
+                botMessage.textContent = "I'm sorry, I'm just a demo bot. I cannot process orders. How can I assist you further?";
+                chatContainer.appendChild(botMessage);
+                chatContainer.scrollTop = chatContainer.scrollHeight; // Auto-scroll to bottom
+            }, 500);
+        }
+    </script>
+</body>
+</html>
